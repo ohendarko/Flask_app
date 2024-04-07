@@ -2,7 +2,7 @@ from flask import Flask, render_template, url_for, flash, redirect
 from forms import RegistrationForm, LoginForm
 import email_validator
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '02-7f5ce927ba58e1709c9942adb5f5a9'
+app.config['SECRET_KEY'] = '027f5ce927ba58e1709c9942adb5f5a9'
 
 posts = [
     {
