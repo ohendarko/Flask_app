@@ -1,4 +1,3 @@
-from datetime import datetime
 from flask_blog import db
 from datetime import datetime
 
@@ -24,4 +23,3 @@ class Post(db.Model):
 
     def __repr__(self):
         return f"Post('{self.title}', '{self.date_posted}')"
-

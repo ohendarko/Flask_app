@@ -1,7 +1,6 @@
 from flask import render_template, url_for, flash, redirect
 from flask_blog.forms import RegistrationForm, LoginForm
 from flask_blog import app
-from flask_blog.models import User, Post
 
 posts = [
     {
@@ -17,6 +16,7 @@ posts = [
         'date_posted': 'April 20, 2024'
     }
 ]
+
 
 @app.route("/")
 @app.route("/home")
@@ -46,5 +46,5 @@ def login():
             flash('You have been logged in!', 'success')
             return redirect(url_for('home'))
         else:
-            flash('Login Unsuccesful. Please check username and password', 'danger')
+            flash('Login Unsuccessful. Please check username and password', 'danger')
     return render_template('login.html', title='Register', form=form)
