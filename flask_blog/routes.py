@@ -1,6 +1,8 @@
 from flask import render_template, url_for, flash, redirect
+from flask_blog.forms import RegistrationForm, LoginForm
+from flask_blog import app
+from flask_blog.models import User, Post
 
-from models import User, Post
 posts = [
     {
         'author': 'KOD',
